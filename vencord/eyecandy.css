@@ -4,8 +4,8 @@
  * @authorId 807170846497570848
  * @description Vencord port of Hanibee's Eye Candy theme.
  * @version 1.0.0
- * @updateUrl https://Moodzz1.github.io/DT/vencord/eyecandy.css
- * @source https://github.com/Moodzz1/DT/tree/main/vencord
+ * @updateUrl https://mudaranrhiod.github.io/DT/vencord/eyecandy.css
+ * @source https://github.com/mudaranrhiod/DT/tree/main/vencord
  */
 
  :root {
@@ -18,25 +18,30 @@
     --hover: #CFC7D83E; /* hovers */
     --text-1: #E8E8EA;
     --text-2: #BDBECC;
+    --text-3: #CEB0CD; /* placeholder text */
     
     /* Discord */
-    --background-base-lower: var(--bg-2)!important;
-    --background-mentioned: #BDBAEB17!important;
-    --background-modifier-selected: #5A5966!important;
-    --background-surface-high: #3F3E4A!important;
-    --bg-brand: var(--candy-accent)!important;
-    --channels-default: var(--text-2)!important;
-    --chat-background-default: #5A4D5E!important;
-    --checkbox-background-checked: #C3A16E!important;
-    --icon-tertiary: #8E9297!important; /* read channel icons, chat header icons, inbox, help */
-    --input-background: #5A4D5E!important;
-    --message-reacted-background: #C88EAD33!important;
-    --message-reacted-text: #fff!important;
-    --shadow-border: #ff0!important;
-    --status-danger: #C3A16E!important;
-    --text-muted: #CEB0CD!important;
-    --text-normal: var(--text-1)!important;
-    --text-tertiary: #8E9297!important; /* read channel names, DM name next */
+    --background-base-lower: var(--bg-2) !important;
+    --background-mentioned: #BDBAEB17 !important;
+    --background-modifier-selected: #5A5966 !important;
+    --background-surface-high: #3F3E4A !important;
+    --bg-brand: var(--candy-accent) !important;
+    --channels-default: var(--text-2) !important;
+    --channel-icon: var(--text-2) !important;
+    --channel-text-area-placeholder: var(--text-3) !important;
+    --chat-background-default: #5A4D5E !important;
+    --checkbox-background-checked: #C3A16E !important;
+    --icon-tertiary: #8E9297 !important; /* read channel icons, chat header icons, inbox, help */
+    --input-background: #5A4D5E !important;
+    --mention-foreground: #DFBE80 !important;
+    --message-reacted-background: #C88EAD33 !important;
+    --message-reacted-text: #fff !important;
+    --shadow-border: #ff0 !important;
+    --status-danger: #C3A16E !important;
+    --text-link: #FFE1C1 !important;
+    --text-muted: var(--text-3) !important;
+    --text-normal: var(--text-1) !important;
+    --text-tertiary: #8E9297 !important; /* read channel names, DM name next */
     
     --bg-overlay-2: var(--bg-2);
     --bg-overlay-3: #5A4D5E;
@@ -44,16 +49,17 @@
     --blue-new-36: #FFE1C1;
     --blurple-10: #5A4D5E;
     --blurple-19: #DFBE80; /* @mention foreground */
-    --blurple-35: #CEB0CD;
+    --blurple-35: var(--text-3);
     --blurple-49: #C3A16E; /* new message header */
     --blurple-50: var(--candy-accent-2); /* reacted border */
     --blurple-59: var(--text-1);
-    --channel-text-area-placeholder: #CEB0CD;
+    --channel-text-area-placeholder: var(--text-3);
     --green-360: #D1B681;
     --green-new-50: #D1B681;
     --neutral-5: var(--text-1);
     --neutral-22: var(--text-2);
     --neutral-29: #f00;
+    --neutral-32: var(--text-3);
     --plum-13: var(--candy-accent-2);
     --red-345: #C4967A;
     --red-360: #1eff00;
@@ -88,12 +94,13 @@
     
     .container__2637a, /* channel list */
     .sidebarListRounded_c48ade,
+    .itemsContainer_ef3116, /* server list */
     .members_c8ffbb, /* member list outer background */
     .childContainer__91a9d, .container__91a9d, 
     .container_c8ffbb,
-    .childWrapperNoHoverBg__6e9f8,
-    .folderIconContent__93fc9,
-    .circleIconButton__5bc7e,
+    
+    
+    
     .title_f75fb0, /* top chat header */
     .children__9293f:after,
     .floatingBars__74017:empty+.stackedBars__74017:nth-child(2), .stackedBars__74017, /* reply and make it a thread bars */
@@ -132,14 +139,14 @@
     .header__45690, .messagesPopout__45690 /* pinned messages background when there are no pins */
     { background: var(--bg-2); }
     
-    .guilds_c48ade, /* server list background */ 
     .title_c38106,
-    .pill__1f388,
-    .chat_f75fb0[data-has-border=true]
+    .childWrapperNoHoverBg__6e9f8,
+    .folderIconContent__93fc9,
+    .circleIconButton__5bc7e
     { background: var(--bg-3); }
    
     .container__37e49, .panels_c48ade /* profile thing on bottom left */
-    { background: #474655; border-radius: 8px;}
+    { background: var(--bg-3); border-radius: 8px;}
 
     /* input backgrounds */
     .channelTextArea_f75fb0, .channelTextArea_fb64c9,  /* chatbox */
@@ -149,7 +156,7 @@
     .popout__3f413:not(.popoutPositionTop__3f413),
     .headerButton__57d3f,
     .header_f369db,
-    /* .button__201d5 this causes problems somehow guh */
+    /* .button__201d5 this causes problems somehow */
     .footer__4d95d,
     .traitContainer__4cbea,
     .inlineContainer__74017,
@@ -160,8 +167,9 @@
 
      /* input background text colour */
     .hasContent__5126c, 
-    .tag_fea832 
-    { background: #CEB0CD; }
+    .tag_fea832
+    { background: var(--text-3); }
+    .editor_a99829 { --channel-text-area-placeholder: var(--text-3); }
 
     .spriteGreyscale__04eed,
     .lottieIconColors__5eb9b :not(defs *)[fill][fill-opacity]
@@ -190,11 +198,18 @@
     .mention__3b95d
     { background: var(--candy-accent);}
 
-    .baseShapeRound__2b1f5
+    .baseShapeRound__2b1f5,
+    .spineBorder__5b40b
     { background: var(--candy-accent-2); }
 
+    .invertedSpine__5b40b,
     .repliedMessageClickableSpine_c19a55 /* reply pipe */
     { border-color: var(--candy-accent-2); }
+
+    path[d="M0 13H2c0 1.6569 1.3432 3 3 3v2c-2.7614 0-5-2.2386-5-7ZM0 2H2V13H0V2ZM2 2H0C0 1.4477.4477 1 1 1c.5523 0 1 .4477 1 1Z"], 
+    path[d="M6 18V16H9v2H6Zm3 0V16s1 0 1 1-1 1-.989 1.004ZM6 16v2H5V16H6Z"] {
+        fill: var(--candy-accent-2);
+    }
 
     .hoverBarButton_f84418:hover
     { background: var(--hover); }
@@ -206,9 +221,9 @@
     .container__87bf1 { background: #696779!important; }
     .container__87bf1.checked__87bf1 { background: #C2A775!important;}
 
-   
+    .tutorialContainer__1f388 { background: var(--bg-2); padding-top: 10px;}
 
-    /* test */
+    /* testing */
     .checked__87bf1 { background: #f00; }
     .total__260e1::after { border-right-color: #5A4D5E; }
      
@@ -231,29 +246,29 @@
     .ring_c9fddf { border-color: var(--bg-2);}
     .connectionOptionsWrapper_c7f964 { background: var(--bg-2); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;}
 
-    /* status indicators - I got this from another theme, forgot which but credits to that */
-    rect[fill='#83838b'] {
+    /* status indicators - I got this from refact0rs midnight theme */
+    rect[fill='#82838b'] {
         fill: #75748B;
     }
-    .status_a423bd[style='background-color: rgb(131, 131, 139);'] {
+    .status_a423bd[style='background-color: rgb(130, 131, 139);'] {
         background-color: #75748B !important;
     }
-    rect[fill='#43a25a'] {
-        fill: #90B27C;
+    rect[fill='#40a258'] {
+        fill: #90b27c;
     }
-    .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
-        background-color: #90B27C !important;
+    .status_a423bd[style='background-color: rgb(64, 162, 88);'] {
+        background-color: #90b27c !important;
     }
-    rect[fill='#c99656'] {
+    rect[fill='#cc954c'] {
         fill: #C3A260;
     }
-    .status_a423bd[style='background-color: rgb(201, 150, 86);'] {
+    .status_a423bd[style='background-color: rgb(204, 149, 76);'] {
         background-color: #C3A260 !important;
     }
-    rect[fill='#d83a42'] {
+    rect[fill='#d83a41'] {
         fill: #C4967A;
     }
-    .status_a423bd[style='background-color: rgb(216, 58, 66);'] {
+    .status_a423bd[style='background-color: rgb(216, 58, 65);'] {
         background-color: #C4967A !important;
     }
     rect[fill='#593695'] {
