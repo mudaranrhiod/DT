@@ -73,6 +73,8 @@
     --status-danger: var(--candy-accent);
     --yellow-300: #BDBAEB;
 
+    --status-online: #ff0;
+
     /* modify colors */
     .title_f75fb0, .children__9293f:after,/* top chat header */
     .chatContent_f75fb0, /* chat background*/
@@ -110,7 +112,7 @@
     .childContainer__91a9d, .container__91a9d, 
     .container_c8ffbb,
     .floatingBars__74017:empty+.stackedBars__74017:nth-child(2), .stackedBars__74017, /* reply and make it a thread bars */
-    .menu_c1e9c4, /* popup menus */
+    .menu_c1e9c4, .popout__76f04, .reactionTooltip_b49891, /* popup/popout menus */
     .popoverReactionHoverBar_f84418,
     .gridContainer__623de, /* embed background */
     .prompt__5d7c9, /*  channels and roles customise questions inner backrounds */
@@ -194,6 +196,9 @@
     .defaultColor__4bd52
     { color: #fff; }
 
+    .top_b3f026   { --text-secondary: var(--text-2); }
+    .brand_b3f026 { --text-brand : #B17B93; }
+
     /* buttons */
     .jumpToPresentBar__0f481,
     .lookFilled__201d5.colorPrimary__201d5, .sortDropdown__27f60,
@@ -236,6 +241,9 @@
     .lookFilled__201d5.colorGreen__201d5:hover
     { background: #c3a15c; }
     
+    .focused_c1e9c4 { --background-feedback-critical: #C4967A3e !important;}
+    .label_c1e9c4, .icon_c1e9c4 { --text-feedback-critical: #C4967A; }
+
     /* switch sliders */
     .container__87bf1, .shinyButton__6a443:hover { background: #696779!important; }
     .container__87bf1.checked__87bf1 { background: #C2A775!important;}
@@ -248,7 +256,9 @@
 
     .messagesPopoutWrap__45690,
     .scroller_c1e9c4,
-    .accountProfilePopoutWrapper__37e49
+    .accountProfilePopoutWrapper__37e49,
+    .popout__76f04,
+    .reactionTooltip_b49891
     { box-shadow: 0px 0px 50px hsl(0, 0%, 0%); border-radius: 8px;}
 
     .checkbox_f525d3.checked_f525d3 { background: #C2A775; }
@@ -260,7 +270,6 @@
     .replying__5126c  { background: #E8E8EA14; }
     .reaction_f8896c.reactionMe_f8896c { background: var(--message-reacted-background);}
     .messagelogger-deleted { background: #c4967a89!important; } /* vencord message logger deleted background */
-
     .container_cd2100 { border: none;}
     .ring_c9fddf { border-color: var(--bg-2);}
     .connectionOptionsWrapper_c7f964 { background: var(--bg-2); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;}
