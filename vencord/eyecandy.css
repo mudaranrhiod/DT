@@ -138,7 +138,7 @@
     .accountProfileCard__1fed1,
     .connectContainer_c7f964, .accountBtnInner__750de,
     .radioBar__001a7,
-    .vc-addon-card, .cardPrimary__73069, /* vencord plugin cards */
+    .vc-addon-card, .cardPrimary__73069, .vc-plugin-stats, /* vencord plugin cards */
     .footer__49fc1, .medium__49fc1, /* vencord plugin popup header for settings/more info */
     .container__927fc, .container__7bdb0, /* apps background */
     .content__908e2,
@@ -203,6 +203,9 @@
     .defaultColor__4bd52
     { color: #fff; }
 
+    .button-danger-background
+    { color: var(--text-1) !important; border: #1eff00 !important;}
+
     .top_b3f026   { --text-secondary: var(--text-2); }
     .brand_b3f026 { --text-brand : #B17B93; }
 
@@ -221,12 +224,14 @@
     .bar__7aaec,
     .mention__3b95d,
     .lookFilled__201d5.colorBrand__201d5
-    { background: var(--candy-accent);}
+    { background: var(--candy-accent) !important;}
     
-    .textBadge__2b1f5 /* live badge */
+    .textBadge__2b1f5, /* live badge */
+    .vc-plugins-badge
     { background-color: var(--candy-accent) !important; }
     
-    .expandedFolderBackground__48112 { background-color: #5a5966; }
+    .expandedFolderBackground__48112  { background-color: #5a5966; }
+    .vc-special-card { background-color: #8F669C !important; } /* settings > vencord page */
     
     .baseShapeRound__2b1f5,
     .spineBorder__5b40b
@@ -234,8 +239,9 @@
 
     .invertedSpine__5b40b,
     .repliedMessageClickableSpine_c19a55, /* reply pipe */
-    .container_a45028
-    { border-color: var(--candy-accent-2); }
+    .container_a45028,
+    .input__0f084
+    { border-color: var(--candy-accent-2) !important; }
 
     path[d="M0 13H2c0 1.6569 1.3432 3 3 3v2c-2.7614 0-5-2.2386-5-7ZM0 2H2V13H0V2ZM2 2H0C0 1.4477.4477 1 1 1c.5523 0 1 .4477 1 1Z"], 
     path[d="M6 18V16H9v2H6Zm3 0V16s1 0 1 1-1 1-.989 1.004ZM6 16v2H5V16H6Z"] {
@@ -254,6 +260,11 @@
 
     .hoverBarButton_f84418:hover
     { background: var(--hover); }
+    .vc-addon-card:hover, 
+    .vc-settings-quickActions-pill:hover,
+    .cardPrimary__73069:hover,
+    .vc-plugin-stats:hover
+    { background: #cfc7d81a !important; }
 
     .lookFilled__201d5.colorGreen__201d5:hover
     { background: #c3a15c; }
@@ -279,6 +290,8 @@
     .reactionTooltip_b49891,
     .tooltipPrimary__382e7
     { box-shadow: 0px 0px 50px hsl(0, 0%, 0%); border-radius: 8px; border-color: #696779;}
+
+    .header__49fc1 { border-top-left-radius: 12px; border-top-right-radius: 12px; }
 
     .checkbox_f525d3.checked_f525d3 { background-color: #C5A361; border-color: #C5A361; }
     .redGlow__67645 { background-color: #c4957866 !important; } 
