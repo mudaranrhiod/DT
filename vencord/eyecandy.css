@@ -23,6 +23,7 @@
     /* Discord */
     --background-base-lower: var(--bg-2) !important;
     --background-mentioned: #BDBAEB17 !important;
+    --background-mentioned-hover: #10132033 !important;
     --background-modifier-selected: #5A5966 !important;
     --background-surface-high: #3F3E4A !important;
     --bg-brand: var(--candy-accent) !important;
@@ -85,7 +86,7 @@
     .formWithLoadedChatInput_f75fb0:before,
     .pageBody__5d7c9, .scroller__5d7c9, /*  channels and roles customise questions outer backround */
     .message__02a39, /* search results cards */
-    .section_c7ac92, .divider__325ce, .divider__23eb0, .body__747b1, .overlay__747b1, .overlay_c0bea0,
+    .section_c7ac92, .divider__325ce, .divider__23eb0, .overlay__747b1, 
     .role__5d7c9, .scrollerInner_e4503a, .categoryRow_e4503a, .pageBody__41ed7,
     .peopleColumn__133bf, /* friends page */
     .outer_bf1984, .body__00943,
@@ -108,7 +109,8 @@
     .topPerksCard__3add8,
     .tooltipPrimary__382e7
     { background: var(--bg-1); }
-    
+    .overlay_c0bea0, .card__747b1, .menuOverlay_af7fb7 { background: var(--bg-1) !important; } /* profile in DMs */
+
     .title_c38106, /* Top header bar */
     .container__2637a, /* channel list */
     .sidebarListRounded_c48ade,
@@ -125,7 +127,7 @@
     .profileCard__5d7c9,
     .searchHeader_f3b986,
     .scroller_a9e706, /* search body */
-    .panel_c0bea0,  /* profile in DMs */
+    .panel_c0bea0, .body__747b1,  /* profile in DMs */
     .inner_c0bea0,
     .body_af7fb7,
     .actionButton_f8fa06,
@@ -153,9 +155,10 @@
     .header__45690, .messagesPopout__45690, /* pinned messages background when there are no pins */
     .shinyButton__6a443, /* boosting page button */
     .middleBodyContentWrapper__6fd0e, .scroller__6fd0e,
-    .scroller__6b0e0
+    .scroller__6b0e0,
+    .actionButtons_cc1819, .buttonInner_aec7ab
     { background: var(--bg-2); }
-    
+
     .childWrapperNoHoverBg__6e9f8,
     .folderIconContent__93fc9,
     .circleIconButton__5bc7e,
@@ -163,7 +166,8 @@
     .folderIconWrapper__48112
     { background: var(--bg-3); }
    
-    .container__37e49, .panels_c48ade /* profile thing on bottom left */
+    .container__37e49, .panels_c48ade, /* profile thing on bottom left */
+    .vc-notification
     { background: var(--bg-3); border-radius: 8px;}
 
     /* input backgrounds */
@@ -199,12 +203,19 @@
     .pendingIcon__93fc9
     { color: var(--text-2); }
     
+
     /* header text */
     .defaultColor__4bd52
     { color: #fff; }
 
     .button-danger-background
     { color: var(--text-1) !important; border: #1eff00 !important;}
+
+    .wrapper_f61d60
+    { color: #DFBE80; }
+
+    .anchor_edefb8
+    { color: #FFE1C1; }
 
     .top_b3f026   { --text-secondary: var(--text-2); }
     .brand_b3f026 { --text-brand : #B17B93; }
@@ -279,8 +290,10 @@
 
     .tutorialContainer__1f388 { background: var(--bg-2); }
     .tooltipPointer__382e7 { border-top-color: var(--bg-1); }
+    
     /* testing */
     .checked__87bf1 { background: #f00; }
+   
     .total__260e1::after { border-right-color: #5A4D5E; }
 
     .messagesPopoutWrap__45690,
@@ -289,13 +302,17 @@
     .popout__76f04,
     .reactionTooltip_b49891,
     .tooltipPrimary__382e7
-    { box-shadow: 0px 0px 50px hsl(0, 0%, 0%); border-radius: 8px; border-color: #696779;}
+    { box-shadow: 0px 0px 50px hsla(0, 0%, 0%, 0.555); border-radius: 8px; border-color: #696779 ; }
+
+    [class*=menu_][class*=flexible_] {
+        border: 1px solid #696779;
+    }
 
     .header__49fc1 { border-top-left-radius: 12px; border-top-right-radius: 12px; }
 
     .checkbox_f525d3.checked_f525d3 { background-color: #C5A361; border-color: #C5A361; }
     .redGlow__67645 { background-color: #c4957866 !important; } 
-            
+
     .interactive, .wrapper_f61d60 { background: #DFBE804D; } /* @mention background */
     .mentioned__5126c { background: #BDBAEB17; } /* mention highlight */
     .button_f563df { background: #5A5966; }
