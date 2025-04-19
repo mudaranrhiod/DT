@@ -77,7 +77,6 @@
     --red-360: #1eff00;
     --status-danger: #ff0;
     --yellow-300: #BDBAEB;
-
     --status-online: #ff0;
 
     /* modify colors */
@@ -107,8 +106,11 @@
     .footer__45690, /* pinned message footer background when there are no pins */
     .users__260e1,
     .topPerksCard__3add8,
-    .tooltipPrimary__382e7
+    .tooltipPrimary__382e7,
+    .trait_d452e4,
+    .messageGroupWrapper__45690
     { background: var(--bg-1); }
+
     .overlay_c0bea0, .card__747b1, .menuOverlay_af7fb7 { background: var(--bg-1) !important; } /* profile in DMs */
 
     .title_c38106, /* Top header bar */
@@ -120,6 +122,7 @@
     .container_c8ffbb,
     .floatingBars__74017:empty+.stackedBars__74017:nth-child(2), .stackedBars__74017, /* reply and make it a thread bars */
     .menu_c1e9c4, .popout__76f04, .reactionTooltip_b49891, /* popup/popout menus */
+    .root__49fc1 /* modal border stuff */
     .popoverReactionHoverBar_f84418,
     .gridContainer__623de, /* embed background */
     .prompt__5d7c9, /*  channels and roles customise questions inner backrounds */
@@ -151,19 +154,25 @@
     .wrapper__44df5,
     .sidebar_c48ade:after,
     .sidebar_c48ade,
-    .header_ab6641, .scroller__95796, .channelHeader__35a7e, .scroller__2692d, /* inbox backgrounds */
+    .header_ab6641, .scroller__95796, .channelHeader__35a7e, .scroller__2692d, .container__0f711, /* inbox backgrounds */
     .header__45690, .messagesPopout__45690, /* pinned messages background when there are no pins */
     .shinyButton__6a443, /* boosting page button */
     .middleBodyContentWrapper__6fd0e, .scroller__6fd0e,
     .scroller__6b0e0,
-    .actionButtons_cc1819, .buttonInner_aec7ab
+    .actionButtons_cc1819, .buttonInner_aec7ab,
+    .container__86ab2, /* server tag popup */
+    .floatingNitroUpsell__39749, /* stupid nitro ad bar */
+    .header__5cea9, /* blocked users in settings page */
+    .container__55c99, /* search background */ 
+    .listContainer__527b1 .listElement__527b1 
     { background: var(--bg-2); }
 
     .childWrapperNoHoverBg__6e9f8,
     .folderIconContent__93fc9,
     .circleIconButton__5bc7e,
     .topicsPillContainer__0f481,
-    .folderIconWrapper__48112
+    .folderIconWrapper__48112,
+    .usersList__5cea9, .loadMoreContainer__5cea9 /* blocked users in settings page */
     { background: var(--bg-3); }
    
     .container__37e49, .panels_c48ade, /* profile thing on bottom left */
@@ -227,7 +236,8 @@
     .inner_ab8609, .outer_ab8609:before, .outer_ab8609:after, /* status bubbles */
     .role_dfa8b6, /* role chips */
     .controlButton_ab6641, .friendRequestsButton__523aa, .button__06eda,
-    .guildBoostCtaSecondary_f9f04c
+    .guildBoostCtaSecondary_f9f04c,
+    .loadMoreButton__5cea9
     { background: #5A5966; }
 
     .checkIcon__270d7,
@@ -292,7 +302,11 @@
     .tooltipPointer__382e7 { border-top-color: var(--bg-1); }
     
     /* testing */
+
+    .body__527b1 { background: #1eff00; }
+    
     .checked__87bf1 { background: #f00; }
+    
    
     .total__260e1::after { border-right-color: #5A4D5E; }
 
@@ -303,6 +317,9 @@
     .reactionTooltip_b49891,
     .tooltipPrimary__382e7
     { box-shadow: 0px 0px 50px hsla(0, 0%, 0%, 0.555); border-radius: 8px; border-color: #696779 ; }
+
+    .upsellContainerShadow__0b69f
+    { filter: drop-shadow(0 0 10px rgba(175, 152, 107, 0.5)) ; } 
 
     [class*=menu_][class*=flexible_] {
         border: 1px solid #696779;
@@ -324,6 +341,7 @@
     .container_cd2100 { border: none;}
     .ring_c9fddf { border-color: var(--bg-2);}
     .connectionOptionsWrapper_c7f964 { background: var(--bg-2); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;}
+    .content__49fc1 { background: var(--bg-1); border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;}
 
     /* status indicators */
     rect[fill='#82838b'], svg[fill='#82838b'] {
